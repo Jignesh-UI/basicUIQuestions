@@ -1,0 +1,69 @@
+// Alerts
+
+.base-alert {		
+	vertical-align: middle;
+	color: #fff;
+	background-color: #7ca450;	
+	/*min-width: 495px;*/
+	
+	.alert-icon{
+		vertical-align: middle;
+		margin-right: 16px;
+		
+		> span {
+			color: white;
+			font-size: 19px;
+			@include centerer;
+			@include vert-centerer;
+			left: 27%;
+		}
+	}
+	
+	> button.close{
+		top: -27px;
+		right: -43px;
+	}
+}
+
+@mixin alr($box-bg-clr, $box-brd-clr:none, $box-brd:0, $box-brd-radius: 0){
+	@extend .base-alert;
+	@include border-radius(0);
+	border: 0;
+	background-color: $box-bg-clr; 
+	
+	.alert-icon{
+		@include circle(40px, darken($alert-success-bg, 13%), 0);
+		//@include circle(40px, $alert-icon-circle-bg, 0);
+	}
+}
+ 
+// Alert
+$alert-success-bg: #7ca450;
+$alert-error-bg: #a45050;
+$alert-icon-circle-bg: #577238;
+
+
+.message-success{	
+	@include alr($alert-success-bg)
+}
+
+.message-error {
+	@include alr($alert-error-bg);
+	
+	.alert-icon{
+		@include circle(40px, darken($alert-error-bg, 13%), 0);
+	}
+}
+
+.message-success,
+.message-error {
+  display: table;
+  width: 100%;
+  .alert-msg-icon {  
+    display: table-cell;
+    width: 40px;
+  } 
+  .alert-content {
+    display: table-cell;     
+  }
+}

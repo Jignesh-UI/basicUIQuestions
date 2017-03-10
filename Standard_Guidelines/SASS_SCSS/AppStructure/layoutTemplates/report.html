@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Report Layout</title>
+<!-- Latest compiled and minified CSS -->
+<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"-->
+<link rel="stylesheet" href="../css/fonts/fontAwesome/scss/font-awesome.css">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+	.page-header-block{
+		height: 83px;
+		background-color: yellow;
+		padding: 10px;
+	}	
+	.page-header-block .container-fluid{
+		padding-left:0;
+	}
+	.page-body{
+		background-color: green;
+		top: 53px;
+		min-height: 300px;
+		padding: 10px;
+	}	
+</style>
+
+</head>
+<body ng-app="mis-controls">
+<header class="header page-header-block">
+	<div>
+		<p class="text-muted">Place sticky header content here.</p>
+	</div>
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="top:85px">
+      <div class="container-fluid">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand visible-xs" href="#">UI Bootstrap</a>
+            </div>
+            <nav class="hidden-xs">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" dropdown="">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" dropdown-toggle="">
+                            Directives <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#alert">Alert</a></li>
+							<li><a href="#buttons">Table</a></li>
+                        </ul>
+                    </li>
+					<li class="dropdown" dropdown="">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" dropdown-toggle="">
+                            Plain Bootstrap <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#labels">Labels/Headings</a></li>							
+                        </ul>
+                    </li>
+                </ul>
+            </nav>		
+      </div>
+    </nav>	
+</header>
+
+<div class="col-lg-12 page-body">
+	<!-- body -->
+</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	<script src="../js/ui-bootstrap-tpls-0.12.0.js"></script>
+	<script src="../js/app.js"></script>	
+</body>
+</html>

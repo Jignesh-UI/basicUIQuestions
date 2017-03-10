@@ -1,0 +1,48 @@
+//   Module/Button
+
+%base-button{		
+	color: $text-default;
+	margin: 5px;
+	
+	.icon-prop{
+		color: white;
+		line-height: 0.7;
+		margin-right: 8px;
+	}	
+}
+
+// To be moved to mixin file if it is not too specific to module
+@mixin btn($vertical-padding, $horizontal-padding, $color-txt, $color-bg, $btn-radius) {
+    @extend %base-button;
+    background-color: $color-bg;
+	border-color: $color-bg;
+	border-radius: $btn-radius;
+	color: $color-txt;
+	line-height: $control-line-height-small;
+	min-width: 110px;
+	padding: $vertical-padding $horizontal-padding;
+	
+    &:hover {
+        background-color: darken($color-bg, 5%);
+		border-color: darken($color-bg, 5%);
+    }
+}
+
+.button-action {
+    @include btn($button-padding-vertical-base, $button-padding-horizontal-base, $text-default, $button-action-bg, $button-radius);	
+}
+.button-cancel {
+    @include btn($button-padding-vertical-base, $button-padding-horizontal-base, $text-default, $button-cancel-bg, $button-radius);
+}
+.free {
+	 width: 100%;
+}
+
+.button-expand-collapse{
+	@include btn(0, 8px, $text-default, #8f91b7, 13px);	
+	font-size: 18px;
+	min-width: 26px;
+	height: 26px;
+	font-weight: bold;
+	padding: 0;
+}

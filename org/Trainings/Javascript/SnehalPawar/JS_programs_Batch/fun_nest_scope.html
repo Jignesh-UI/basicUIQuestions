@@ -1,0 +1,36 @@
+<html>
+     <head>
+          <title> My nested function program with scopes</title>
+     </head>
+           <body>
+                 <script>
+	                   // The following variables are defined in the global scope
+						var num1 = 10,
+						num2 = 2,
+						name = "John";
+
+					// This function is defined in the global scope
+						function multiply() {
+									return num1 * num2;
+								}
+
+						console.log(multiply()); // Returns 20
+
+					// A nested function example
+						function getScore () {
+												var num1 = 4,
+												num2 = 3;
+  
+						function add() {
+										return name + " scored " + (num1 + num2);
+										}
+  
+						return add();
+								}
+
+							console.log(getScore()); // Returns "John scored 7"
+							console.log(num1);
+
+				</script>
+		</body>
+</html>

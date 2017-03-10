@@ -1,0 +1,21 @@
+<html>
+    <head>
+	      <title>My Program for User defined Objects </title>
+	</head>
+
+    <body>
+	     <script>
+			var Person = function (first_name) { //JavaScript uses functions as constructors for classes.
+          this.first_name=first_name;  // this represents current object
+		  console.log('instance created');
+           };
+
+           var person1 = new Person("John");//Two instances of person using new keyword
+           var person2 = new Person("alex");
+		   
+		   console.log("Obj1 property is "+person1.first_name+"obj property of obj2 is  "+person2.first_name);// accesing property of person1 obj
+		   
+		   
+		</script>
+   </body>
+</html>		

@@ -1,0 +1,41 @@
+<html>
+		<body>
+				<script>
+
+					function one() {
+									this.a = "hello";
+									}
+
+					function two() {
+									this.a= "bye";
+									}
+
+						var friend = new one();
+						var foe = new two();
+
+						var player = new Object();
+						player.__proto__ = foe;//prototype to foe
+						
+						
+
+						
+
+					if (console && console.log) {
+					
+						console.log(player.a === "hello" );// Returns false
+						console.log(player.a === "bye");  // Returns true
+						
+					// Turn the foe to a friend.
+	
+						player.__proto__ = friend;//prototype to friend
+   
+						console.log(player.a === "hello"); // Returns true
+						console.log(player.a === "bye");  // Returns false
+						
+}
+
+					</script>
+
+		</body>
+
+</html>

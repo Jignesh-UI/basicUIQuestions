@@ -1,0 +1,26 @@
+
+<html>
+<head>
+<title>Variable scope</title>
+</head>
+<body>
+	<script>
+	var a="Hiii";
+	function fun1(){
+	console.log("1---value for a is"+a);
+	var a="Hello";
+    console.log("2--value of a is "+a);
+	return function(){
+	console.log("3---value of a is"+a);
+	}
+	console.log("4---value of a is"+a);
+
+	}
+	console.log("5---value of a"+a);
+    var returnfun=fun1();
+	returnfun();
+
+	console.log("6--- value of a "+a);
+	</script>
+</body>
+</html>

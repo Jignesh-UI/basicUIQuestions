@@ -1,0 +1,2 @@
+If needed theme folder will have similar folder structure as SCSS root has
+Refer _light-theme

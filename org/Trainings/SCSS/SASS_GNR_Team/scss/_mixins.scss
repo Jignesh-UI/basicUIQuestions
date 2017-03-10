@@ -1,0 +1,42 @@
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+
+@mixin blue-btn {
+  background: #e5f7ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5f7ff), to(#99e0ff));
+  background: -moz-linear-gradient(top,  #e5f7ff,  #99e0ff);
+  background: -ms-linear-gradient(top,  #e5f7ff,  #99e0ff);
+  background: linear-gradient(#e5f7ff, #99e0ff);
+  border-radius: 3px;
+  border: 1px solid #7497a5;
+  box-shadow: 0px 1px 0px rgba(255,255,255,0.7);
+  color: #004966;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 12px;
+  text-shadow: 0px 1px 0px rgba(255,255,255,1);
+}
+
+@mixin blue-header {
+  color: $textcolor;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@mixin black-header {
+  color: #4C5051;
+  font-size: 14px;
+  font-weight: bold;
+}

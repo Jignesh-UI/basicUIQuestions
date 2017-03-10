@@ -1,0 +1,14 @@
+<html>
+	<body>
+		<script> 
+			function doWork() {
+            return function calculate(y) { return y + 1; };//function returned from function.
+            }
+			var func = doWork();
+            var x = func(5);
+			console.log(x);
+            //document.writeln(x);
+			// Output: 6
+		</script>
+	</body>
+</html>

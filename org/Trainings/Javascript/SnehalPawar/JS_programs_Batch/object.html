@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+			<script>
+				var person = {
+					firstName : "John",
+					lastName  : "Doe",//object literals with name value pair
+					age       : 50,
+					eyeColor  : "blue"
+				};
+
+				var car="Volvo";//object update
+				console.log(person.firstName + " is " + person.age + " years old.");// object retrieval
+				console.log(typeof person.age);//reflection for type of property
+				var person2 = Object.create(person);
+				console.log("age of person object access from person2 so age=  "+person2.age);
+				delete person.age;//deleting object property of parent object 
+				delete person2.firstName;
+				console.log("age of person object access from person2 so age=  "+person2.age+"  "+person2.firstName);
+			</script>
+	</body>
+</html>

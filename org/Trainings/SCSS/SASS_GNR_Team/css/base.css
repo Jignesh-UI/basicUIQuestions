@@ -1,0 +1,84 @@
+/* base.scss */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+/*colors*/
+body {
+  font: 100% Helvetica, Arial;
+  background-color: #efefef; }
+
+.box {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  border: 5px solid red;
+  height: 200px;
+  width: 200px; }
+
+.center {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  border: 5px solid red;
+  width: 70%;
+  height: auto;
+  margin: 0 auto; }
+
+.centerContent {
+  border: 5px solid yellow;
+  margin: 0 auto; }
+
+.button-large {
+  background: #e5f7ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5f7ff), to(#99e0ff));
+  background: -moz-linear-gradient(top, #e5f7ff, #99e0ff);
+  background: -ms-linear-gradient(top, #e5f7ff, #99e0ff);
+  background: linear-gradient(#e5f7ff, #99e0ff);
+  border-radius: 3px;
+  border: 1px solid #7497a5;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+  color: #004966;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 12px;
+  text-shadow: 0px 1px 0px white;
+  height: 50px;
+  width: 200px; }
+
+.button-medium {
+  background: #e5f7ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5f7ff), to(#99e0ff));
+  background: -moz-linear-gradient(top, #e5f7ff, #99e0ff);
+  background: -ms-linear-gradient(top, #e5f7ff, #99e0ff);
+  background: linear-gradient(#e5f7ff, #99e0ff);
+  border-radius: 3px;
+  border: 1px solid #7497a5;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+  color: #004966;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 12px;
+  text-shadow: 0px 1px 0px white;
+  height: 50px;
+  width: 200px; }
+
+a.myAnchor {
+  color: blue; }
+  a.myAnchor:hover {
+    text-decoration: underline; }
+  a.myAnchor:visited {
+    color: purple; }
+
+/*# sourceMappingURL=base.css.map */

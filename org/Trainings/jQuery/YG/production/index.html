@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome JAVA Frsh Batch</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#searchInput').keyup(function(){
+          if ($(this).val() == '') { //Check to see if there is any text entered
+               //If there is no text within the input ten disable the button
+               $('.enableOnInput').prop('disabled', true);
+          } else {
+               //If there is text in the input, then enable the button
+               $('.enableOnInput').prop('disabled', false);
+          }
+     });	
+	$("p").append($("strong"));
+	$("button").click(function(){
+		$.ajax({
+					url:"sample.txt",
+					success:function(result){
+						$("#div1").html(result);
+					},
+					error:function(err){
+						$("#div1").html("Error loading file - "+err.status );
+					}
+				});
+  });
+ });
+</script>
+</head>
+<body>
+Welcome JAVA Frsh Batch July '14
+<input name="hello" id="searchInput">
+<input name="helloman" >
+<input name="hello-you">
+<input name="mehelloaaa" type='button' value="sub" class="enableOnInput" disabled="disabled" />
+<br>
+<strong>Hello world!!!</strong>
+<p>I would like to say: </p>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<button>Get External Content</button>
+</body>
+</html>

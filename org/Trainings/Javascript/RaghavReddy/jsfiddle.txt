@@ -1,0 +1,5 @@
+Set Prototype  - http://jsfiddle.net/FC6GK/2/
+Rent Constructor - http://jsfiddle.net/8xEfL/
+Rent and Set - http://jsfiddle.net/7vM9x/
+Share a prototype - http://jsfiddle.net/Q638T/
+Surrogate method - http://jsfiddle.net/sGT2B/
