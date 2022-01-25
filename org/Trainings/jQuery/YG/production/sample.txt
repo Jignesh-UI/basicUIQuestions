@@ -1,2 +1,0 @@
-<h2>It is FUN!</h2>
-<p id="p1">Yo YO Text</p>

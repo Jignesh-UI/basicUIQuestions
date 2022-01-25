@@ -1,0 +1,1503 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Scrum Questions </title>
+    <script src="./script/jquery1.11.1.js"></script>
+    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
+    <style>
+        :root {
+            --color-white: #ffffff;
+            --black: #1f1f1e;
+            --dark-tone-teal: #075b81;
+            --color-grey-light: #cccccc;
+            --color-alternet-row: #FBF7F1;
+            --pale: #e7e4df;
+            --color-light-coral: #ec8a7e;
+            --color-border: #2b2b28;
+        }
+
+        body {
+            font-size: 15px;
+            font-family: "Open Sans", sans-serif, Helvetica, Arial;
+        }
+
+        .dataRow {
+            border: 1px solid var(--black);
+        }
+
+        .dataRowHeader {
+            background: var(--pale);
+            padding: 10px;
+        }
+
+        .unstyled-list {
+            padding: 10px;
+            margin: 0 20px 20px;
+        }
+
+        .unstyled-list li {
+            list-style: none;
+        }
+
+        .unstyled-list li .dataRowAnswer1 label {
+            display: flex;
+        }
+
+        .unstyled-list li .dataRowAnswer2 {
+            display: flex;
+        }
+
+        .dataRowExplanation {
+            background: var(--pale);
+            padding: 10px;
+        }
+
+        .wrapper {
+            position: relative;
+            flex: 1 0 auto;
+            counter-reset: my-sec-counter;
+        }
+
+        .QABox {
+            padding: 0px;
+            border: 1px solid var(--color-border);
+            counter-increment: my-sec-counter;
+        }
+
+        .QABox+.QABox {
+            margin-top: 10px;
+        }
+
+        .QBox {
+            background: var(--color-grey-light);
+            padding: 8px 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .QBox::before {
+            content: "Q: "counter(my-sec-counter) ") ";
+            color: var(--black);
+            font-weight: bold;
+        }
+
+        .QBox::after {
+            content: "+";
+            color: var(--black);
+            font-weight: bold;
+            font-size: 24px;
+            position: absolute;
+            right: 5px;
+            top: 0;
+        }
+
+        .QBox.Open::after {
+            content: "";
+            background: var(--black);
+            top: 15px;
+            width: 10px;
+            height: 3px;
+            right: 6px;
+        }
+
+        .ABox {
+            padding: 5px 10px 15px 10px;
+            display: none;
+        }
+
+        .ABox::before {
+            content: "A: "counter(my-sec-counter) ") ";
+            color: var(--black);
+            font-weight: bold;
+        }
+
+        .RBox {
+            background: var(--pale);
+            padding: 5px 10px;
+            display: none;
+        }
+
+        .RBox::before {
+            content: "Description: ";
+            color: var(--black);
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".QBox").click(function () {
+                var obj = $(this);
+                if ($(obj).hasClass("Open")) {
+                    $(obj).closest(".QABox").find(".ABox,.RBox").slideUp();
+                    $(obj).removeClass("Open");
+                } else {
+                    $(obj).closest(".QABox").find(".ABox,.RBox").slideDown();
+                    $(obj).addClass("Open");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="quiz-page-layout--scroll-container--EkGOs">
+        <div class="quiz-page-layout--container--1EPyC">
+            <div class="quiz-page-layout--content--1s-Hg">
+                <h2 class="mt-space-0 mb-space-lg" data-purpose="title">Scrum Theory and Values -
+                    Results</h2>
+
+
+                <div data-purpose="detailed-result-panel"
+                    class="detailed-result-panel--detailed-result-panel--lQcl7 panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 1: </span><span
+                                        class="correctAns">Correct</span>
+                                    <div id="question-prompt">List the
+                                        three pillars that uphold Scrum?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer" type="checkbox" disabled="" checked=""><span
+                                                        class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>
+                                                                Transparency</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Inspection
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Adaptation
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Agile
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>
+                                                                Self-organisation</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>
+                                                                Lightweight
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum combines four formal events for inspection and adaptation within a
+                                        containing event, the Sprint. These events work because they implement the
+                                        empirical Scrum pillars of transparency, inspection, and adaptation.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 2: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">If one or
+                                        more aspects of a process deviate outside acceptable limits, when must an
+                                        adjustment be made?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>When the
+                                                                Scrum Master approves</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div> The
+                                                                deviations should be discussed at the Daily Scrum and
+                                                                the adjustment made after consensus by all</div>
+                                                        </div>
+                                                        <div>(Incorrect)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>After
+                                                                agreeing with the Product Owner</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>As soon as
+                                                                possible to minimize further deviation</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>If
+                                        any aspects of a process deviate outside acceptable limits or if the resulting
+                                        product is unacceptable, the process being applied or the materials being
+                                        produced must be adjusted. The adjustment must be made as soon as possible to
+                                        minimize further deviation.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 3: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">Scrum is
+                                        not a process or technique. True or False?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>TRUE</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>FALSE
+                                                            </div>
+                                                        </div>
+                                                        <div>(Incorrect)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum is a lightweight framework
+                                        Various processes, techniques and methods can be employed within the framework.
+                                        Scrum wraps around existing practices or renders them unnecessary. Scrum makes
+                                        visible the relative efficacy of current management, environment, and work
+                                        techniques, so that improvements can be made.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 4: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">Which of
+                                        these are Scrum Values?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer" type="checkbox" disabled="" checked=""><span
+                                                        class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Commitment
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Courage
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Openness
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Respect
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Focus
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Successful use of Scrum depends on people becoming more proficient in living
+                                        five values:
+                                        Commitment, Focus, Openness, Respect, and Courage</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 5: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">What is
+                                        Scrum?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>A software
+                                                                development methodology to improve quality</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>A
+                                                                framework
+                                                                within which people can address complex adaptive
+                                                                problems, while
+                                                                delivering products of the highest possible value.</div>
+                                                        </div>
+                                                        <div>(Incorrect)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Scrum is a
+                                                                lightweight framework that generates value through
+                                                                adaptive solutions for complex problems.</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum is a lightweight framework that helps people, teams and organizations
+                                        generate value through adaptive solutions for complex problems.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 6: </span><span
+                                        class="correctAns">Correct</span>
+                                    <div id="question-prompt">The Scrum
+                                        guide recommends implementing the part of Scrum (events, artifacts, roles etc)
+                                        that are applicable in the current project</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>TRUE - Use
+                                                                only what is necessary for success</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>FALSE -
+                                                                Implementing parts of Scrum is not Scrum</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>The
+                                        Scrum framework, as outlined herein, is immutable. While implementing only parts
+                                        of Scrum is possible, the result is not Scrum. Scrum exists only in its entirety
+                                        and functions well as a container for other techniques, methodologies, and
+                                        practices.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 7: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">What is
+                                        Scrum is founded on? Pick two</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1  checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer" type="checkbox" disabled="" checked=""><span
+                                                        class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Kanban
+                                                                system</div>
+                                                        </div>
+                                                        <div>(Incorrect)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Common
+                                                                Sense</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Empirical
+                                                                criticism</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Empirical
+                                                                process control theory, or empiricism</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Lean
+                                                                thinking</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum is founded on empiricism and lean thinking. Empiricism asserts that
+                                        knowledge comes from experience and making decisions based on what is observed.
+                                        Lean thinking reduces waste and focuses on the essentials.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 8: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">What does
+                                        Cone of Uncertainty describe?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>
+                                                                Dependencies, start times and stop times for project
+                                                                tasks</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>The
+                                                                evolution of uncertainty in a project over time</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>How much
+                                                                work remains till the end of the Sprint</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Hierarchy
+                                                                of tasks that comprise a project</div>
+                                                        </div>
+                                                        <div>(Incorrect)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>The
+                                        cone of uncertainty describes the best case uncertainty of a project as we
+                                        progress through time. As more development is completed, more is known and the
+                                        uncertainty and risk reduce to zero percent at the end of the project. It is
+                                        usually represented as a graph showing estimation variance against time
+                                        **********Q&amp;A Question and Reply**********
+
+                                        Question: Where is the Cone of Uncertainty in the Scrum Guide?
+
+                                        My Reply
+
+                                        I gave a lot of thought before I included this in my course. I gear my course on
+                                        passing certification exams based on the Scrum Guide. Exams like the CSM and
+                                        PSM1. But while they do stick to the guide 99% of the time, they do throw in a
+                                        few curve balls. The cone of uncertainty is one of them. I have been reliably
+                                        informed in the past that a question on the cone has cropped up. So, I decided
+                                        that I needed to put any curve balls that I come across within my course, for
+                                        completeness.
+
+                                        In project management, the cone describes the evolution of uncertainty through a
+                                        project and with traditional project management frameworks, it really is a major
+                                        challenge. I will give an example from my past. I would regularly ask my team to
+                                        estimate timescales for activities at the beginning of a project and the
+                                        estimates would be about three times less than the actual time taken as per my
+                                        analysis at completion. I would actually multiply everything by about 2.5 in my
+                                        head to understand what I needed!
+
+                                        So, though it is not mentioned in the guide, it is actually very relevant
+                                        because the incremental and iterative nature of the Scrum framework is an
+                                        excellent way to mitigate the risk of this uncertainty. Scrum has some great
+                                        ways of reducing the differences between the Expected numbers and the Actuals!!
+
+                                        ************
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 9: </span><span
+                                        class="correctAns">Correct</span>
+                                    <div id="question-prompt">Which of
+                                        the following is key to Inspection and Adaptation</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Scrum
+                                                                Roles
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Scrum
+                                                                Events</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Scrum
+                                                                Artifacts</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Sprint
+                                                                Goal
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>To
+                                        help with inspection, Scrum provides cadence in the form of its five events.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 10: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">The true
+                                        definition of Scrum is "A framework within which people can address complex
+                                        adaptive problems, while productively and creatively delivering products of the
+                                        highest possible value."</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer" type="radio" disabled="" checked=""><span
+                                                        class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>TRUE</div>
+                                                        </div>
+                                                        <div>(Incorrect)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>FALSE
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum Guide 2020: Scrum is a lightweight framework that helps people, teams and
+                                        organizations generate value through adaptive solutions for complex problems.
+
+                                        NB: This question text is the definition of Scrum in the 2017 version of the
+                                        Scrum Guide. I marked it as incorrect simply because it is no longer the
+                                        definition from the guide.
+                                        What do you think? Are they similar? Is it improved in 2020? Is the 2017
+                                        definition better?</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 11: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">What is
+                                        the fundamental unit of Scrum</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>A Scrum
+                                                                Master, a Product Owner and developers</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>A Self
+                                                                organising development team</div>
+                                                        </div>
+                                                        <div>(Incorrect)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>The Scrum
+                                                                rules and guidelines</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>A small
+                                                                team of people that is highly flexible and adaptive
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>The
+                                        fundamental unit of Scrum is a small team of people, a Scrum Team. The Scrum
+                                        Team consists of one Scrum Master, one Product Owner, and Developers. Within a
+                                        Scrum Team, there are no sub-teams or hierarchies. It is a cohesive unit of
+                                        professionals focused on one objective at a time, the Product Goal.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 12: </span><span
+                                        class="correctAns">Correct</span>
+                                    <div id="question-prompt">List two
+                                        essential features a Scrum Team should possess?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer" type="checkbox" disabled=""><span
+                                                        class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>It should
+                                                                be flexible enough to complete all the work planned for
+                                                                the Sprint even if the full team is not available</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>The team
+                                                                are self-managing, they decide who does what, when, and
+                                                                how</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>The team
+                                                                is
+                                                                cross-functional, the members have all the skills
+                                                                necessary to create the value</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>It should
+                                                                use tools, processes and techniques approved by the
+                                                                organisation</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum Teams are cross-functional, meaning the members have all the skills
+                                        necessary to create value each Sprint. They are also self-managing, meaning they
+                                        internally decide who does what, when, and how.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 13: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">List 4
+                                        elements of the Scrum Framework?</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer" type="checkbox" disabled="" checked=""><span
+                                                        class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Events
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Rules
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Burn-down
+                                                                charts</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Teams
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Artifacts
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 checkbox boxed disabled"><label title="">
+                                                <div><input name="answer"  type="checkbox"
+                                                        disabled=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Status
+                                                                Updates</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum is a lightweight framework
+                                        the rules of Scrum guide their relationships and interactions.
+                                        The fundamental unit of Scrum is a small team of people, a Scrum Team
+                                        Scrum combines four formal events for inspection and adaptation within a
+                                        containing event, the Sprint
+                                        Scrum’s artifacts represent work or value</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 14: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">The Scrum
+                                        Framework is complete, with all the necessary processes and techniques embedded
+                                        within</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer" type="radio" disabled="" checked=""><span
+                                                        class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div>TRUE (Incorrect)</div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>FALSE
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>The Scrum framework is purposefully incomplete. Rather than provide people with
+                                        detailed instructions, the rules of Scrum guide their relationships and
+                                        interactions.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 15: </span><span
+                                        class="IncorrectAns">Incorrect</span>
+                                    <div id="question-prompt">What does
+                                        the Scrum Framework provide to aid inspection</div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer" type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>The role of the inspector within the Scrum Team</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 ">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""
+                                                        checked=""><span class=" radio-label">&#8203;</span>
+                                                </div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        Inspection responsibility given to the Scrum Master (Incorrect)
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2">
+                                            <label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Scrum provides cadence in the form of its five events.
+                                                            </div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1"><label title="">
+                                                <div><input name="answer"  type="radio" disabled=""><span
+                                                        class=" radio-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  ">
+                                                        <div class="fx">
+                                                            <div>Inspection is assigned to a member of the Dev team for each Sprint
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>To help with inspection, Scrum provides cadence in the form of its five events.</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="dataRow ">
+                            <form>
+                                <div class="dataRowHeader"><span>Question 16: </span><span
+                                        class="correctAns">Correct</span>
+                                    <div id="question-prompt">Where can Scrum be used? (Check all the applicable items)
+                                    </div>
+                                </div>
+                                <ul class="unstyled-list">
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer" type="checkbox" disabled="" checked=""><span
+                                                        class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Research and identifying of viable markets,
+                                                                technologies, and product capabilities</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div> Development and sustaining of Cloud and other
+                                                                operational environments</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div> Development of software and hardware</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div> Development of products and enhancements</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div>Managing the operation of an organisation</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                    <li>
+                                        <div class="dataRowAnswer1 dataRowAnswer2 checkbox boxed disabled">
+                                            <label title="">
+                                                <div><input name="answer"  type="checkbox" disabled=""
+                                                        checked=""><span class=" checkbox-label">&#8203;</span></div>
+                                                <div>
+                                                    <div class="fx  dataRowAnswer2">
+                                                        <div class="fx">
+                                                            <div> Development of almost everything we use in our daily
+                                                                lives as individuals and societies</div>
+                                                        </div>
+                                                        <div>(Correct)</div>
+                                                    </div>
+                                                </div>
+                                            </label></div>
+                                    </li>
+                                </ul>
+                                <div class="dataRowExplanation">
+                                    <h4>Explanation</h4>
+                                    <div>
+                                        Scrum has been used in each and every phase of product development and
+                                        management
+                                        <ul class="unstyled-list">
+                                            <li>
+                                                1) Research and identify viable markets, technologies, and product
+                                                capabilities;
+                                            </li>
+                                            <li>
+                                                2) Develop products and enhancements;
+                                            </li>
+                                            <li>
+                                                3) Release products and enhancements, as frequently as many times per
+                                                day;
+                                            </li>
+                                            <li>
+                                                4) Develop and sustain Cloud (online, secure, on-demand) and other
+                                                operational environments for product use
+                                            </li>
+                                            <li>
+                                                5) To sustain and renew products.
+                                            </li>
+                                        </ul>
+
+                                        Scrum is now being used beyond products, into services and the actual management
+                                        of organisations and has proven to be especially effective in iterative and
+                                        incremental knowledge transfer Some examples include: software, hardware,
+                                        embedded software, networks of interacting function, autonomous vehicles,
+                                        schools, government, Marketing, managing the operation of organisations and
+                                        almost everything we use in our daily lives, as individuals and societies NB:
+                                        Text from 2017 Scrum Guide and removed in 2020. Still valid though!</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
