@@ -1,6 +1,0 @@
-- Guidelines are inherited from https://angularjs.org/ 
-	and Best practices followed by Angular Developers Community
-
-
-Updates required,
-- Code snippet needs to be improved as per the Angular V 1.3

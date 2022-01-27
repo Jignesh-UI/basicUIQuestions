@@ -1,2 +1,0 @@
-- state of the application
-- This may include tenancy related stylings

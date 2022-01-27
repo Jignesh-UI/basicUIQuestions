@@ -1,2 +1,0 @@
-- Multiple HTML templates can be stored in this folder.
-- CSS will remain in SCSS and CSS folder only.
