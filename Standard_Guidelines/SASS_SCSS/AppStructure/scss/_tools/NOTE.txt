@@ -1,2 +1,0 @@
-- Developer has to decide whether to have tools or base classes.
-- Both can't be added together.

@@ -1,2 +1,0 @@
-- Compiled folder to be added to production.
-- Your HTML pages should refer CSS/Font paths from here and not from SCSS folder.
